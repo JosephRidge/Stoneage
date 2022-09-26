@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "17834647045",
+    "project_id": "stoneagetechv1",
+    "storage_bucket": "stoneagetechv1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17834647045:android:fa833130ce8c925ec4c66c",
+        "android_client_info": {
+          "package_name": "com.example.stoneage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "17834647045-l0g8mhriet4odn58h3kqeh2u2822gb8p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9Hzk6zeg47oymuc__33PiWesd5iR6BXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "17834647045-l0g8mhriet4odn58h3kqeh2u2822gb8p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

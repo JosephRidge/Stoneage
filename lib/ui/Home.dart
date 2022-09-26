@@ -24,6 +24,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset:false,
         appBar: AppBar(
           title: const Text("Welcome Home ✨ "),
         ),
@@ -61,7 +62,7 @@ class _HomepageState extends State<Homepage> {
                                 fontSize: 16),
                           ),
                           subtitle: Text(
-                            users[index]['email'],
+                            (users[index]['email'] == null)? " no email":users[index]['email'],
                             style: const TextStyle(
                                 color: Colors.black54,
                                 fontWeight: FontWeight.normal,
