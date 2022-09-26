@@ -162,7 +162,7 @@ class _LoginPageState extends State<LoginPage> {
               child: ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    // Process data. 
+                    // Process data.
                  signInUser(emailController.text.trim(),passwordController.text.trim());
                     if(isAuthenticated){
                       Navigator.push(context, MaterialPageRoute(builder: (_) =>

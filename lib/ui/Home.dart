@@ -1,8 +1,10 @@
 import 'dart:collection';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:stoneage/data/api.dart';
+import 'package:stoneage/ui/UserDetail.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -17,9 +19,13 @@ class _HomepageState extends State<Homepage> {
 
   @override
   void initState() {
+    print("Started **************");
+    setState(() {
+      futureUser = makeApiCall("");
+    });
     super.initState();
-    futureUser = makeApiCall("");
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -75,6 +81,16 @@ class _HomepageState extends State<Homepage> {
                                 fontWeight: FontWeight.w400,
                                 fontSize: 12),
                           ),
+                          onTap: (){
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
+                                UserDetail(
+                                  username: users[index]['username'],
+                                  email: (users[index]['email'] == null)?"NOT DEFINED":users[index]['email'],
+                                  password: users[index]['password'],
+                                  createdAt: users[index]['createdDate'],
+                                ),));
+
+                          },
                         );
                       },
                     );
@@ -87,18 +103,6 @@ class _HomepageState extends State<Homepage> {
                       margin: const EdgeInsets.only(top: 50.0),
                       child: const Center(child: CircularProgressIndicator()));
                 },
-              ),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: FloatingActionButton(
-                  onPressed: () {
-                    setState(() {
-                      futureUser = makeApiCall("");
-                    });
-                  },
-                  tooltip: 'Users',
-                  child: const Icon(Icons.refresh_rounded),
-                ),
               ),
               // This trailing comma makes auto-formatting nicer for build methods.
             ]));

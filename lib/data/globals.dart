@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 String username = "";
 String password = "";
 bool authenticated = false;
-const String BASE_URL_POSTMAN ='https://c8f1-41-90-176-50.eu.ngrok.io/api/v1/users/'; // exposed via ngrok
+const String BASE_URL_POSTMAN ='https://897d-41-90-176-50.eu.ngrok.io/api/v1/users/'; // exposed via ngrok
 const getAllUserPaths ='';
 
 //Check current user auth state :
